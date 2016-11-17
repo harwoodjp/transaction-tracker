@@ -5,14 +5,17 @@
 	width:120px;
 }
 #amount-input::-webkit-input-placeholder {
-   color: white;
+	color: white;
 }
-
 #amount-spent-on {
 	background: transparent; 
 	border: none;
 	color:white;
 	width:auto;
+	option {
+		background-color: #FF4000;
+		border:none;
+	}
 }
 #app-content-area {
 	text-align:center;
