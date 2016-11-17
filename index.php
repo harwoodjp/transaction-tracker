@@ -1,9 +1,3 @@
-<?php 
-	include("utils/db_calls.php");
-	$conn = db_connect();
-	$recent = select($conn, "select * from transaction order by date desc");
-?>
-
 <html>
 <head>
 	<link rel="stylesheet" href="styles/normalize.css">
