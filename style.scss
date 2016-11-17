@@ -1,0 +1,54 @@
+#amount-input {
+	background: transparent; 
+	border: none;
+	color:white;
+	width:120px;
+}
+#amount-input::-webkit-input-placeholder {
+   color: white;
+}
+
+#amount-spent-on {
+	background: transparent; 
+	border: none;
+	color:white;
+	width:auto;
+}
+#app-content-area {
+	text-align:center;
+}
+body {
+	font-family: 'Dosis', sans-serif;
+	background-color:#FF4000;
+	color:white;
+	margin:0;
+	padding:0;
+}
+.container-margins {
+	margin-left:10%;
+	margin-right:10%;
+}
+.flex-column {
+	display:flex;
+	flex-direction:column;
+	flex-wrap:wrap;
+
+}
+#heading {
+	font-size:50px;
+	font-weight:bold;
+	margin:0;
+	margin-top:20px;
+	padding:0;
+	white-space:nowrap;
+}
+#main-area {
+	font-size:2.5em;
+	justify-content:center;
+}
+#today-i-spent {
+	p {
+		margin:0;
+		padding:0;
+	}
+}
