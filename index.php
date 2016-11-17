@@ -8,27 +8,29 @@
 
 <body>
 	<div id="app-content-area" class="flex-column">
-		<div id="title-area">
+		<div id="title-section">
 			<p id="heading">Transaction Tracker</p>
-		</div>
-		<div id="main-area" class="flex-column">
+		</div> <!-- /#title-area -->
+		<div id="main-section" class="flex-column">
 			<div id="today-i-spent">
-				<p>
-					I've just spent $<input id="amount-input" placeholder="0.00">
-				</p>
-				<p> 
-					on 
-					<select id="amount-spent-on">
-						<option>auto</option>
-						<option>bill</option>
-						<option>food</option>
-						<option>fun</option>
-						<option>home</option>
-					</select>
-					.
-				</p>
-			</div>		
-		</div>
-	</div>
+				<form method="get" action="process_transaction.php">
+					<input type="hidden" name="user" value="justin">
+					<p>
+						I've just spent $<input type="number" pattern="(d{3})([.])(d{2})" name="amount" id="amount-input" placeholder="0.00">
+					</p>
+					<p style> on 
+						<select id="amount-spent-on" name="category">
+							<option value="auto">auto.</option>
+							<option value="bill">bill.</option>
+							<option value="food">food.</option>
+							<option value="fun">fun.</option>
+							<option value="home">home.</option>
+						</select>
+				  		<button  id="track-button">Save!</button>
+					</p>
+				</form>
+			</div> <!-- /#today-i-spent -->
+		</div> <!-- /#main-area -->
+	</div> <!-- /#app-content-area -->
 </body>
 </html>
