@@ -11,6 +11,7 @@
 	background: transparent; 
 	border: none;
 	color:white;
+	text-align:right;
 	width:auto;
 	option {
 		background-color: #FF4000;
@@ -40,7 +41,7 @@ button {
 	flex-wrap:wrap;
 
 }
-#heading {
+.heading {
 	font-size:50px;
 	font-weight:bold;
 	margin:0;
@@ -48,6 +49,14 @@ button {
 	padding:0;
 	text-align:center;
 	white-space:nowrap;
+}
+#last-5-days-section {
+	ul {
+		list-style:none;
+		margin:0;
+		margin-left:50px;
+		padding:0;
+	}
 }
 #main-section {
 	font-size:2.75em;
@@ -57,12 +66,14 @@ button {
 
 }
 #today-i-spent {
+	text-align:center;	
 	p {
 		margin:0;
 		margin-bottom:0px;
 		padding:0;
 	}
 	#track-button {
+		background-color:white;
 		color:#FF4000;		
 		font-size:.75em;
 		width:120px;

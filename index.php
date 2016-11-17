@@ -1,3 +1,9 @@
+<?php 
+	include("utils/db_calls.php");
+	$conn = db_connect();
+	$recent = select($conn, "select * from transaction order by date desc");
+?>
+
 <html>
 <head>
 	<link rel="stylesheet" href="styles/normalize.css">
@@ -8,28 +14,44 @@
 
 <body>
 	<div id="app-content-area" class="flex-column">
+		
 		<div id="title-section">
-			<p id="heading">Transaction Tracker</p>
+			<p class="heading">Log transaction:</p>
 		</div> <!-- /#title-area -->
+		
 		<div id="main-section" class="flex-column">
 			<div id="today-i-spent">
 				<form method="get" action="process_transaction.php">
 					<input type="hidden" name="user" value="justin">
 					<p>
-						I've just spent $<input type="number" pattern="(d{3})([.])(d{2})" name="amount" id="amount-input" placeholder="0.00">
+						I spent $<input required type="text" name="amount" id="amount-input" placeholder="0.00">
 					</p>
-					<p style> on 
-						<select id="amount-spent-on" name="category">
+					<p> on 
+						<select required id="amount-spent-on" name="category">
 							<option value="auto">auto.</option>
 							<option value="bill">bill.</option>
 							<option value="food">food.</option>
 							<option value="fun">fun.</option>
 							<option value="home">home.</option>
 						</select>
-				  		<button  id="track-button">Save!</button>
 					</p>
+					<button id="track-button">Log!</button>
+
 				</form>
 			</div> <!-- /#today-i-spent -->
+
+			<div id="last-5-days-section">
+				<p class="heading">Recent transactions:</p>
+				<ul>
+					<?php while ($row = $recent->fetch_assoc()) { ?>
+						<li>
+							$<?=$row["amount"] ?> on 
+							<?=$row["type"] ?>.
+						</li>
+					<?php } ?>
+				</ul>
+			</div>
+
 		</div> <!-- /#main-area -->
 	</div> <!-- /#app-content-area -->
 </body>
