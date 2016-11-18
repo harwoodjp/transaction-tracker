@@ -1,11 +1,8 @@
-<?php 
-	include("utils/db_calls.php");
-	$conn = db_connect();
-	$recent = select($conn, "select * from transaction order by date desc");
-?>
+
 
 <html>
 <head>
+	<meta name="viewport" content="width=device-width">
 	<link rel="stylesheet" href="styles/normalize.css">
 	<link rel="stylesheet" href="styles/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">

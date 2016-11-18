@@ -43,7 +43,7 @@ button {
 }
 .heading {
 	font-size:50px;
-	font-weight:bold;
+	font-weight:normal;
 	margin:0;
 	margin-top:20px;
 	padding:0;
@@ -64,6 +64,9 @@ button {
 	white-space:nowrap;
 	     margin: 0 auto;
 
+}
+@-ms-viewport{
+	width: device-width;
 }
 #today-i-spent {
 	text-align:center;	
