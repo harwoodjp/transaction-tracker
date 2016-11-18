@@ -1,5 +1,8 @@
-
-
+<?php 
+	include("utils/db_calls.php");
+	$conn = db_connect();
+	$recent = select($conn, "select * from transaction order by date desc limit 5");
+?>
 <html>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=.8">
@@ -25,11 +28,11 @@
 					</p>
 					<p> on 
 						<select required id="amount-spent-on" name="category">
-							<option value="auto">auto.</option>
-							<option value="bill">bill.</option>
-							<option value="food">food.</option>
-							<option value="fun">fun.</option>
-							<option value="home">home.</option>
+							<option value="auto">auto</option>
+							<option value="bill">bill</option>
+							<option value="food">food</option>
+							<option value="fun">fun</option>
+							<option value="home">home</option>
 						</select>
 					</p>
 					<button id="track-button">Log!</button>

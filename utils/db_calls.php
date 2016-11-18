@@ -1,11 +1,11 @@
 <?php
 
 function db_connect() {
-	$servername = "localhost";
-	$username = "root";
-	$password = "root";
-	$dbname = "mess_around";
-
+	$servername = getenv('server');
+	$username = getenv('user');
+	$password = getenv('password');
+	$dbname = getenv('db');
+	
 	//create connection
 	$conn = new mysqli($servername, $username, $password, $dbname);
 
