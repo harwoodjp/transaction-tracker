@@ -2,7 +2,7 @@
 
 <html>
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=.5">
+	<meta name="viewport" content="width=device-width, initial-scale=.8">
 	<link rel="stylesheet" href="styles/normalize.css">
 	<link rel="stylesheet" href="styles/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
