@@ -1,7 +1,7 @@
 <?php 
 	include("utils/db_calls.php");
 	$conn = db_connect();
-	$recent = select($conn, "select * from transaction order by date desc limit 5");
+	$recent = select($conn, "select * from transaction order by id desc limit 5");
 ?>
 <html>
 <head>
