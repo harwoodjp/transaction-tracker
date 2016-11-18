@@ -1,11 +1,21 @@
 <?php
 
 function db_connect() {
-	$servername = getenv('server');
-	$username = getenv('user');
-	$password = getenv('password');
-	$dbname = getenv('db');
-	
+
+
+	if (preg_match("/localhost/",$_SERVER["HTTP_HOST"]) == true) {
+		include "config.php";
+		$servername = $server;
+		$username = $user;
+		$password = $pw;
+		$dbname = $db;
+	} else {
+		$servername = getenv('server');
+		$username = getenv('user');
+		$password = getenv('password');
+		$dbname = getenv('db');
+	}
+
 	//create connection
 	$conn = new mysqli($servername, $username, $password, $dbname);
 
