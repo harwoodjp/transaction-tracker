@@ -2,7 +2,6 @@
 
 function db_connect() {
 
-
 	if (preg_match("/localhost/",$_SERVER["HTTP_HOST"]) == true) {
 		include "config.php";
 		$servername = $server;

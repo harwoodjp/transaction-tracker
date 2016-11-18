@@ -24,7 +24,10 @@
 				<form method="get" action="process_transaction.php">
 					<input type="hidden" name="user" value="justin">
 					<p>
-						I spent $<input required type="text" name="amount" id="amount-input" placeholder="0.00">
+						I spent 
+					</p>
+					<p>
+						$<input required type="text" name="amount" id="amount-input" placeholder="0.00">
 					</p>
 					<p> on 
 						<select required id="amount-spent-on" name="category">
@@ -45,7 +48,7 @@
 				<ul>
 					<?php while ($row = $recent->fetch_assoc()) { ?>
 						<li>
-							$<?=$row["amount"] ?> on 
+							<?=money_format('%(#10n', $row["amount"]) ?> on 
 							<?=$row["type"] ?>.
 						</li>
 					<?php } ?>

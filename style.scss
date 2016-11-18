@@ -69,7 +69,11 @@ button {
 	width: device-width;
 }
 #today-i-spent {
-	text-align:center;	
+	text-align:center;
+	input {
+		text-align:center;
+	}
+
 	p {
 		margin:0;
 		margin-bottom:0px;
