@@ -18,31 +18,18 @@
 		
 		<div id="title-section">
 			<p class="heading">Log transaction:</p>
-		</div> <!-- /#title-area -->
+		</div> 
 		
 		<div id="main-section" class="flex-column">
 			<div id="log-transaction">
-				<form id="log-transaction-form">
-					<input type="hidden" name="user" value="justin">
-					<p>
-						$<input type="text" name="amount" id="amount-input" placeholder="0.00">
-						<select required id="amount-spent-on" name="category">
-							<option value="auto">auto</option>
-							<option value="bill">bill</option>
-							<option value="food">food</option>
-							<option value="fun">fun</option>
-							<option value="home">home</option>
-						</select>
-					</p>
-					<button type="button" id="track-button" onclick="fetch_submit();">Log!</button>
-				</form>
-			</div> <!-- /#log-transaction -->
+				<? include "sections/log-transaction-form.php" ?>
+			</div> 
 
 			<div id="last-5-days-section">
 				<? include "sections/last-5-days.php" ?>
 			</div> 
 
-		</div> <!-- /#main-area -->
-	</div> <!-- /#app-content-area -->
+		</div>
+	</div>
 </body>
 </html>
