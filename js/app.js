@@ -10,7 +10,7 @@ function fetch_submit() {
 }
 
 function refresh_5_days_div() {
-	fetch('/transaction-tracker/sections/last-5-days.php')
+	fetch('./sections/last-5-days.php')
 		.then(function(response) {
 			return response.text()
 		}).then(function(body) {
