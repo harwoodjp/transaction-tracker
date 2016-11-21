@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="styles/normalize.css">
 	<link rel="stylesheet" href="styles/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
-	<script src="utils/fetch.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js"></script>
 	<script src="js/app.js"></script>	
 </head>
 
@@ -25,12 +25,7 @@
 				<form id="log-transaction-form">
 					<input type="hidden" name="user" value="justin">
 					<p>
-						I spent 
-					</p>
-					<p>
 						$<input type="text" name="amount" id="amount-input" placeholder="0.00">
-					</p>
-					<p> on 
 						<select required id="amount-spent-on" name="category">
 							<option value="auto">auto</option>
 							<option value="bill">bill</option>
