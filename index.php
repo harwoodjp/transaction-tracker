@@ -28,7 +28,7 @@
 						I spent 
 					</p>
 					<p>
-						$<input required type="text" name="amount" id="amount-input" placeholder="0.00">
+						$<input type="text" name="amount" id="amount-input" placeholder="0.00">
 					</p>
 					<p> on 
 						<select required id="amount-spent-on" name="category">
