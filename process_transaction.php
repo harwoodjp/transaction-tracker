@@ -2,9 +2,9 @@
 include("utils/db_calls.php");
 $conn = db_connect();
 
-$user = $_GET['user'];
-$amount = $_GET['amount'];
-$category = $_GET['category'];
+$user = $_POST['user'];
+$amount = $_POST['amount'];
+$category = $_POST['category'];
 
 $insert_sql = "INSERT INTO transaction(date,user,amount,type) VALUES('".date('Y-m-d H:i:s')."','$user',$amount,'$category')";
 

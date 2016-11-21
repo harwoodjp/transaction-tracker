@@ -21,7 +21,8 @@
 body {
 	font-family: 'Dosis', sans-serif;
 	/*background-color:#FF4000;*/
-	background-image: linear-gradient(135deg,#EB2B24,#EB5324);	
+	background-image: linear-gradient(135deg,#EB2B24,#EB5324);
+	background-size: 100% auto;
 	color:white;
 	margin:0;
 	overflow-x:hidden;
@@ -68,8 +69,16 @@ button {
 @-ms-viewport{
 	width: device-width;
 }
-#today-i-spent {
+#log-transaction {
 	text-align:center;
+	#track-button {
+		background-color:white;
+		color:#FF4000;		
+		font-size:.8em;
+		margin-top:10px;
+		padding:5px;
+		width:200px;
+	}
 	input {
 		text-align:center;
 	}
@@ -79,10 +88,5 @@ button {
 		margin-bottom:0px;
 		padding:0;
 	}
-	#track-button {
-		background-color:white;
-		color:#FF4000;		
-		font-size:.75em;
-		width:120px;
-	}
+
 }

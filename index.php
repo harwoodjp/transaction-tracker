@@ -20,8 +20,8 @@
 		</div> <!-- /#title-area -->
 		
 		<div id="main-section" class="flex-column">
-			<div id="today-i-spent">
-				<form method="get" action="process_transaction.php">
+			<div id="log-transaction">
+				<form id="log-transaction-form">
 					<input type="hidden" name="user" value="justin">
 					<p>
 						I spent 
@@ -38,22 +38,13 @@
 							<option value="home">home</option>
 						</select>
 					</p>
-					<button id="track-button">Log!</button>
-
+					<button id="track-button" onclick="fetch_submit()">Log!</button>
 				</form>
-			</div> <!-- /#today-i-spent -->
+			</div> <!-- /#log-transaction -->
 
 			<div id="last-5-days-section">
-				<p class="heading">Recent transactions:</p>
-				<ul>
-					<?php while ($row = $recent->fetch_assoc()) { ?>
-						<li>
-							<?=money_format('%(#10n', $row["amount"]) ?> on 
-							<?=$row["type"] ?>.
-						</li>
-					<?php } ?>
-				</ul>
-			</div>
+				<? include "sections/last-5-days.php" ?>
+			</div> 
 
 		</div> <!-- /#main-area -->
 	</div> <!-- /#app-content-area -->
