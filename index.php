@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="styles/normalize.css">
 	<link rel="stylesheet" href="styles/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js"></script>	
+	<script src="utils/fetch.js"></script>
 	<script src="js/app.js"></script>	
 </head>
 
@@ -39,7 +39,7 @@
 							<option value="home">home</option>
 						</select>
 					</p>
-					<button id="track-button" onclick="fetch_submit()">Log!</button>
+					<button type="button" id="track-button" onclick="fetch_submit();">Log!</button>
 				</form>
 			</div> <!-- /#log-transaction -->
 
