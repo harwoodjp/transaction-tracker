@@ -1,3 +1,4 @@
+
 function fetch_submit() {
 	fetch('process_transaction.php', {
 		method: 'post',
@@ -34,7 +35,7 @@ function refresh_pie_chart() {
 		.then(function(response) {
 			return response.text()
 		}).then(function(body) {
-			alert(body);
 			document.getElementById("pie-chart").innerHTML = body;
 		})
 }
+
