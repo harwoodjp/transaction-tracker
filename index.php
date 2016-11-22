@@ -5,7 +5,7 @@
 ?>
 <html>
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=.8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="styles/normalize.css">
 	<link rel="stylesheet" href="styles/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
@@ -21,7 +21,7 @@
 				<p class="heading">Log transaction:</p>			
 				<? include "sections/log-transaction-form.php" ?>
 			</div> 
-			
+
 			<div id="last-5-days-section">
 				<p class="heading">Recent transactions:</p>
 				<? include "sections/last-5-days.php" ?>
