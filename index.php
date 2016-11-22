@@ -16,20 +16,23 @@
 <body>
 	<div id="app-content-area" class="flex-column">
 		
-		<div id="title-section">
-			<p class="heading">Log transaction:</p>
-		</div> 
-		
 		<div id="main-section" class="flex-column">
 			<div id="log-transaction">
+				<p class="heading">Log transaction:</p>			
 				<? include "sections/log-transaction-form.php" ?>
 			</div> 
-
+			
 			<div id="last-5-days-section">
+				<p class="heading">Recent transactions:</p>
 				<? include "sections/last-5-days.php" ?>
 			</div> 
 
+			<div id="total-and-chart">
+				<p class="heading">Spending distribution:</p>			
+				<? include "sections/overall-spending-chart.php" ?>
+			</div>
 		</div>
-	</div>
+
+	</div> <!--/#app-content-area -->
 </body>
 </html>

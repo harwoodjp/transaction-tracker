@@ -4,7 +4,6 @@
 	$recent = select($conn, "select * from transaction order by id desc limit 5");
 ?>
 
-<p class="heading">Recent transactions:</p>
 <ul>
 	<?php while ($row = $recent->fetch_assoc()) { ?>
 		<li>
