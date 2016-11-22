@@ -18,8 +18,12 @@
 		border:none;
 	}
 }
+#app-content-area {
+	margin-bottom:10%;
+	margin-top:100px;
+}
 body {
-	font-family: 'Dosis', sans-serif;
+	font-family: 'Oswald', sans-serif;
 	/*background-color:#FF4000;*/
 	background-image: linear-gradient(135deg,#EB2B24,#EB5324);
 	background-size: 100% auto;
@@ -69,6 +73,9 @@ button {
 @-ms-viewport{
 	width: device-width;
 }
+#pie-chart {
+	margin-bottom:50px;
+}
 #log-transaction {
 	text-align:center;
 	#track-button {
@@ -89,8 +96,12 @@ button {
 		padding:0;
 	}
 }
-#total-and-chart {
+#text-total {
+	margin-bottom:0;
 	margin-top:7%;
-	padding-bottom:100px;
 	max-width:500px;
+	#total-spent {
+		margin-top:0;
+		text-align:center;
+	}
 }

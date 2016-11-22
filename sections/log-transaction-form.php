@@ -1,3 +1,4 @@
+<p class="heading">Log transaction:</p>	
 <form id="log-transaction-form">
 	<input type="hidden" name="user" value="justin">
 	<p>
