@@ -8,16 +8,12 @@
     $home = select($conn, "select sum(amount) as home from transaction where user='justin' and type='home'");
 ?>
 
-<canvas id="myChart" width="500" height="500" style="border: 1px solid white;"></canvas>
+<canvas id="myChart" width="200" height="200"></canvas>
 
 <script>
 var ctx = document.getElementById("myChart");
 Chart.defaults.global.defaultFontColor = "white";
-var options = { 
-    responsive: true,
-    maintainAspectRatio: true,
-    animation: false
-}
+
 function drawChart() {
     var myPieChart = new Chart(ctx,{
         type: 'pie',
@@ -70,11 +66,14 @@ function drawChart() {
                     ]
                 }]
         },
-        options: options,
-        legend: {
-            fontColor: "white",
+        options: {
+            responsive: true,
+            maintainAspectRatio: true,
+            animation: false
         }
     });
 }
+
 drawChart();
+
 </script>

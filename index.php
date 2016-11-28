@@ -31,7 +31,7 @@
 			</div>
 				
 			<div id="pie-chart">
-				<? include "sections/overall-spending-chart.php" ?>
+				<? include "sections/overall-spending-chart-google.php" ?>
 			</div>
 
 		</div>
